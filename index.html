@@ -14,14 +14,49 @@
     <meta name="apple-mobile-web-app-title" content="Notes">
 </head>
 <body>
-    <div class="container">
-        <h1>Simple Notes</h1>
-        <div class="note-input">
-            <input type="text" id="noteInput" placeholder="Enter your note..." maxlength="100">
-            <button id="addNoteBtn">Add Note</button>
-        </div>
-        <div id="notesList"></div>
+    <!-- Menu Button -->
+    <div class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Menu -->
+    <div class="menu" id="menu">
+        <div class="menu-header">Menu</div>
+        <div class="menu-item active" data-view="notes">
+            <span class="menu-icon">📝</span>
+            Notes
+        </div>
+        <div class="menu-item" data-view="log">
+            <span class="menu-icon">🗑️</span>
+            Log (deleted)
+        </div>
+    </div>
+
+    <!-- Notes View -->
+    <div class="view active" id="notesView">
+        <div class="container">
+            <h1>Simple Notes</h1>
+            <div class="note-input">
+                <input type="text" id="noteInput" placeholder="Enter your note..." maxlength="100">
+                <button id="addNoteBtn">Add Note</button>
+            </div>
+            <div id="notesList"></div>
+        </div>
+    </div>
+
+    <!-- Log View -->
+    <div class="view" id="logView">
+        <div class="container">
+            <h1>Deleted Notes</h1>
+            <div id="logList"></div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
