@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Notes App</title>
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Notes">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Notes</h1>
+        <div class="note-input">
+            <input type="text" id="noteInput" placeholder="Enter your note..." maxlength="100">
+            <button id="addNoteBtn">Add Note</button>
+        </div>
+        <div id="notesList"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
