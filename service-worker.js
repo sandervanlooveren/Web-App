@@ -1,5 +1,5 @@
 // Service Worker for offline functionality
-const CACHE_NAME = 'notes-app-v1';
+const CACHE_NAME = 'notes-app-v2';
 const urlsToCache = [
     './index.html',
     './styles.css',
@@ -15,6 +15,7 @@ self.addEventListener('install', event => {
             .then(cache => {
                 return cache.addAll(urlsToCache);
             })
+            .then(() => self.skipWaiting()) // Activate immediately
     );
 });
 
@@ -40,6 +41,6 @@ self.addEventListener('activate', event => {
                     }
                 })
             );
-        })
+        }).then(() => self.clients.claim())
     );
 });
